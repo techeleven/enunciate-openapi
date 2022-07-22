@@ -5,13 +5,13 @@
     <groupId>dk.jyskebank.tooling.enunciate</groupId>
     <artifactId>enunciate-openapi</artifactId>
     <name>Enunciate module for OpenAPI</name>
-    <version>1.1.6-SNAPSHOT</version>
+    <version>1.1.6-tech11</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <enunciate.version>2.15.0-SNAPSHOT</enunciate.version>
+        <enunciate.version>2.15.0-tech11</enunciate.version>
         <jackson.version>2.13.3</jackson.version>
         <freemarker.version>2.3.23</freemarker.version>
         <guava.version>14.0.1</guava.version>
@@ -24,6 +24,17 @@
         <junitPlatformVersion>1.5.1</junitPlatformVersion>
         <mockitoVersion>3.0.0</mockitoVersion>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>tech11-nexus-releases</id>
+            <url>${nexus.release.repository}</url>
+        </repository>
+        <snapshotRepository>
+            <id>tech11-nexus-snapshots</id>
+            <url>${nexus.snapshot.repository}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
