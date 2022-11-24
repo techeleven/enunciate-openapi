@@ -7,7 +7,7 @@ plugins {
 defaultTasks 'dist'
 
 ext {
-	enunciateVersion = "2.15.0-SNAPSHOT"
+	enunciateVersion = "2.15.0-tech11"
 
 	guavaVersion = "14.0.1"
 
