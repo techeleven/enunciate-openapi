@@ -8,6 +8,5 @@
 		<jaxrs groupBy="annotation" disabled="false" />
 		<jackson disabled="false" />
 		<jaxb disabled="false" />
-		<jaxrs disabled="false" />
 	</modules>
 </enunciate>
