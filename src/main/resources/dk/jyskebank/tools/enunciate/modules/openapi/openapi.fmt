@@ -60,7 +60,12 @@ paths: {}
 paths:
   [#list paths.endpoints as endpoint]
   ${endpoint.path}:
+    [#assign uniqueMethods = []]
     [#list endpoint.operations as operation]
+      [#if uniqueMethods?seq_contains(operation.httpMethod?lower_case)]
+        [#continue]
+      [/#if]
+      [#assign uniqueMethods = uniqueMethods + [ operation.httpMethod?lower_case ]]
     ${operation.httpMethod}:
       description: ${operation.description}
       tags:
